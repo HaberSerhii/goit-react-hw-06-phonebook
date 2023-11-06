@@ -1,19 +1,26 @@
-import { FilterClearButton, FilterInput, FilterSection } from "./Filter.styled";
+import React from 'react';
 
-const Filter = ({ value, onChange, onReset }) => {
+import { Div, Label, Input } from './Filter.styled';
+import { useDispatch, useSelector } from 'react-redux';
+import { getFilter } from '../../redux/selectors';
+import { changeFilter } from '../../redux/filterSlice';
+
+function Filter() {
+  const handleFilterChange = event => {
+    dispatch(changeFilter(event.target.value));
+  };
+  const dispatch = useDispatch();
   return (
-    <FilterSection>
-      <h2>Contacts</h2>
-        <FilterInput
-          placeholder="Find contact"
+    <Div>
+      <Label>
+        <Input
           type="text"
-          name="filter"
-          value={value}
-          onChange={onChange}
-      />
-      <FilterClearButton onClick={onReset}>Clear</FilterClearButton>
-    </FilterSection>
+          value={useSelector(getFilter)}
+          onChange={handleFilterChange}
+        />
+      </Label>
+    </Div>
   );
-};
+}
 
 export default Filter;
