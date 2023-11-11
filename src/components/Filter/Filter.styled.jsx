@@ -17,7 +17,7 @@ export const FilterInput = styled.input`
   background-color: transparent;
   border: 1px solid white;
   border-radius: 5px;
-  padding: 5px 20px;
+  padding: 10px 20px;
   &:focus {
     border: 1px solid white;
   }
