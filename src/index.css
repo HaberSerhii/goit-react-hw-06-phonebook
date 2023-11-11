@@ -12,6 +12,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 code {

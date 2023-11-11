@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { getContacts } from '../../redux/selectors';
-import { Container, MainTitle, Title } from './App.syled';
+import { Container } from './App.syled';
 import { ContactsForm } from '../ContactsForm/ContactsForm';
 import { Filter } from '../Filter/Filter';
 import { ContactsList } from '../ContactsList/ContactsList';
@@ -10,9 +10,9 @@ export function App() {
 
   return (
     <Container>
-      <MainTitle>Телефона книга</MainTitle>
+      <h1>Телефона книга</h1>
       <ContactsForm />
-      <Title>Контакти</Title>
+      <h2>Контакти</h2>
       <Filter />
       {contacts.length !== 0 && <ContactsList />}
     </Container>
