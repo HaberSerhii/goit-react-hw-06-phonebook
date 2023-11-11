@@ -1,15 +1,19 @@
 import { Form, Field } from 'formik';
 import styled from 'styled-components';
 
-export const StyledForm = styled(Form)``;
+export const ContanctForm = styled(Form)`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
 
-export const Label = styled.label``;
+export const ContactLabel = styled.label``;
 
-export const Input = styled(Field)`
+export const ContactInput = styled(Field)`
   :focus {
   }
 `;
 
-export const StyledErrorMessage = styled.div``;
+export const ContactErrorMessage = styled.div``;
 
-export const Button = styled.button``;
+export const AddButton = styled.button``;

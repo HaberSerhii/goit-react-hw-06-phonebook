@@ -5,11 +5,11 @@ import * as yup from 'yup';
 import { getContacts } from '../../redux/selectors';
 import { addContact } from '../../redux/contactsSlice';
 import {
-  Button,
-  Input,
-  Label,
-  StyledErrorMessage,
-  StyledForm,
+  AddButton,
+  ContactErrorMessage,
+  ContactInput,
+  ContactLabel,
+  ContanctForm,
 } from './ContactsForm.styled';
 
 const schema = yup.object().shape({
@@ -46,24 +46,24 @@ export const ContactsForm = () => {
       onSubmit={handleSubmitForm}
       validationSchema={schema}
     >
-      <StyledForm>
-        <Label>
+      <ContanctForm>
+        <ContactLabel>
           Ім'я
-          <Input type="text" name="name" />
+          <ContactInput type="text" name="name" />
           <ErrorMessage name="name">
-            {msg => <StyledErrorMessage>{msg}</StyledErrorMessage>}
+            {msg => <ContactErrorMessage>{msg}</ContactErrorMessage>}
           </ErrorMessage>
-        </Label>
+        </ContactLabel>
 
-        <Label>
+        <ContactLabel>
           Номер телефону
-          <Input type="text" name="number" placeholder="+380931052345" />
+          <ContactInput type="text" name="number" placeholder="+380931052345" />
           <ErrorMessage name="number">
-            {msg => <StyledErrorMessage>{msg}</StyledErrorMessage>}
+            {msg => <ContactErrorMessage>{msg}</ContactErrorMessage>}
           </ErrorMessage>
-        </Label>
-        <Button type="submit">Додати контакт</Button>
-      </StyledForm>
+        </ContactLabel>
+        <AddButton type="submit">Додати контакт</AddButton>
+      </ContanctForm>
     </Formik>
   );
 };
