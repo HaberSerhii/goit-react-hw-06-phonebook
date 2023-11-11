@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts, getFilter } from '../../redux/selectors';
-import { StyledList } from './ContactsList.styled';
 import { Contact } from '../Contact/Contact';
 import { deleteContact } from '../../redux/contactsSlice';
 
@@ -16,7 +15,7 @@ export const ContactsList = () => {
   );
 
   return (
-    <StyledList>
+    <ul>
       {getVisibleContacts.map(({ id, name, number }) => (
         <Contact
           key={id}
@@ -26,6 +25,6 @@ export const ContactsList = () => {
           deleteContact={() => dispatch(deleteContact(id))}
         />
       ))}
-    </StyledList>
+    </ul>
   );
 };

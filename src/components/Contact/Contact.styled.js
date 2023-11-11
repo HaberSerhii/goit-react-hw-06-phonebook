@@ -21,14 +21,14 @@ export const ItemText = styled.p`
 
 export const ItemDelete = styled.button`
   padding: 5px 10px;
-  border: 2px solid white;
+  border: 1px solid white;
   background-color: transparent;
   color: white;
   border-radius: 5px;
   cursor: pointer;
   &:hover {
     color: black;
-    background-color: red;
-    border: 2px solid black;
+    background-color: yellow;
+    border-color: black;
   }
 `;

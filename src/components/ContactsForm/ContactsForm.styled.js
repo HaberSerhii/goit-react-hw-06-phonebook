@@ -41,5 +41,10 @@ export const AddButton = styled.button`
   background-color: transparent;
   border: 1px solid white;
   color: white;
+  font-weight: 600;
   border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: green;
+  }
 `;
