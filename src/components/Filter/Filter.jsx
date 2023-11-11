@@ -13,7 +13,9 @@ export const Filter = () => {
 
   return (
     <FilterContainer>
-      <FilterLabel htmlFor="filter">Знайти контакт за іменем</FilterLabel>
+      <FilterLabel htmlFor="filter">
+        Знайти контакт за іменем або прізвищем
+      </FilterLabel>
       <FilterInput
         type="text"
         id="filter"
