@@ -18,7 +18,7 @@ const schema = yup.object().shape({
     .string()
     .matches(
       /^\+?3?8?(0\d{9})$/,
-      'Номер повинен починатися з +380-xx-xxx-xx-xx, дивись приклад в input'
+      'Номер повинен починатися з +380-xx-xxx-xx-xx, приклад в input'
     )
     .required(`Це поле обов'язкове для заповнення`),
 });
@@ -48,8 +48,8 @@ export const ContactsForm = () => {
     >
       <ContanctForm>
         <ContactLabel>
-          Ім'я
-          <ContactInput type="text" name="name" />
+          Ім'я та прізвище
+          <ContactInput type="text" name="name" placeholder="Haber Serhii" />
           <ErrorMessage name="name">
             {msg => <ContactErrorMessage>{msg}</ContactErrorMessage>}
           </ErrorMessage>
