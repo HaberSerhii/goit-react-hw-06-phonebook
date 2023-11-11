@@ -18,6 +18,7 @@ export const Filter = () => {
         type="text"
         id="filter"
         value={filterValue}
+        placeholder="Haber Serhii"
         onChange={handleFilterChange}
       />
     </FilterContainer>

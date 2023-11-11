@@ -16,7 +16,7 @@ export const ContactLabel = styled.label`
 `;
 
 export const ContactInput = styled(Field)`
-  width: 150px;
+  width: 300px;
   color: black;
   background-color: transparent;
   border: 1px solid white;
